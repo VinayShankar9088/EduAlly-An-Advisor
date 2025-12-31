@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Information</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f6ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 350px;
+    }
+    h2 {
+      text-align: center;
+      color: #0858d1;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    button {
+      margin-top: 20px;
+      width: 100%;
+      background: #0858d1;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1.1em;
+    }
+    button:hover {
+      background: #064bb4;
+    }
+  </style>
+</head>
+<body>
+  <form action="/save_student" method="POST">
+    <h2>Student Information</h2>
+    <label>Name</label>
+    <input type="text" name="name" required>
+    
+    <label>Age</label>
+    <input type="number" name="age" required>
+    
+    <label>Class/Year</label>
+    <select name="class">
+      <option>9th</option>
+      <option>10th</option>
+      <option>11th</option>
+      <option>12th</option>
+      <option>After 12th</option>
+    </select>
+    
+    <label>Stream/Interest</label>
+    <select name="stream">
+      <option>Science</option>
+      <option>Commerce</option>
+      <option>Arts</option>
+      <option>Vocational</option>
+      <option>Programming/IT</option>
+    </select>
+    
+    <label>Location (City/District)</label>
+    <input type="text" name="location" required>
+    
+    <button type="submit">Save & Continue</button>
+  </form>
+</body>
+</html>

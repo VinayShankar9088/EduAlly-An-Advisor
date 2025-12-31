@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #e6f0ff, #ffffff); /* Light blue-white gradient */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+
+/* Welcome Title */
+#welcome {
+    font-size: 5rem;
+    color: #0858d1;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    position: relative;
+    display: inline-block;
+}
+
+.cap {
+    position: absolute;
+    top: -100px;   /* move upar niche */
+    left: 390px;   /* W ke hisaab se adjust */
+    width: 170px; /* cap size */
+    transform: rotate(-19deg);
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.925);
+    background: #0858d1;
+    border-radius: 8px;
+    /* text-decoration: none; */
+    /* transition: 0.3s ease; */
+}
+
+.btn:hover {
+    background: #0858d1;
+    transform: scale(1.2);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

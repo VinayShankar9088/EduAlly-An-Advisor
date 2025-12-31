@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edually Dashboard</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #ffffff;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background: #0858d1;
+      color: white;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .header-logo {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .header-logo img {
+      width: 50px;
+      height: auto;
+    }
+
+    .header-title {
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+
+
+    #login {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      width: 40px;
+    }
+
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    #logo {
+      width: 200px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .card {
+      background: #0858d1;
+      width: 220px;
+      padding: 30px 20px;
+      text-align: center;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      background: #f0f6ff;
+      color: #0858d1;
+    }
+
+    .card span {
+      font-size: 2.5em;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .ad-banner {
+      display: block;
+      margin: 40px auto;
+      max-width: 100%;
+      height: auto;
+    }
+
+    footer {
+      background-color: #222;
+      color: #fff;
+      padding: 40px 20px 20px;
+      margin-top: 40px;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+      flex: 1;
+      min-width: 250px;
+      margin: 10px;
+    }
+
+    .footer h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: lightblue;
+    }
+
+    .footer h4 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: lightblue;
+    }
+
+    .footer p {
+      font-size: 14px;
+      margin: 6px 0;
+    }
+
+    .footer-center ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-center ul li {
+      margin: 6px 0;
+    }
+
+    .footer-center ul li a {
+      color: #bbb;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-center ul li a:hover {
+      color: #fff;
+    }
+
+    .social-icons a img {
+      width: 28px;
+      margin-right: 12px;
+      filter: brightness(0) invert(1);
+      transition: transform 0.3s;
+    }
+
+    .social-icons a img:hover {
+      transform: scale(1.1);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 12px;
+      color: #aaa;
+      border-top: 1px solid #444;
+      padding-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-logo">
+      <img src="/logo_new.jpg" alt="EduAlly Logo" />
+    </div>
+    <div class="header-title">Student Dashboard</div>
+    <img src="login.png" alt="login" id="login" />
+  </header>
+
+  <div class="logo-container"><img src="/logo_new.jpg" alt="Logo" id="logo" /></div>
+  <h1>Learn 🔵 Grow 🔵 Achieve</h1>
+
+  <div class="container">
+    <a href="pdfs.html" class="card">
+      <span>📄</span> PDFs
+    </a>
+    <a href="external_link.html" id="collegeCard" class="card">
+      <span>🏫</span> Colleges
+    </a>
+    <a href="lecture.html" class="card">
+      <span>🎯</span> Video Lecture
+    </a>
+  </div>
+
+  <img src="image-ad.png.jpg" alt="Ad Banner" class="ad-banner" />
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <h3>EduAlly</h3>
+        <p>Where you get the <strong>right mentorship</strong> for your journey.</p>
+        <p>Email: support@edu-ally.com</p>
+        <p>Phone: +91 98765XXXXX</p>
+      </div>
+
+      <div class="footer-center">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Courses</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Help &amp; Support</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-right">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><img src="facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="instagram.png" alt="Instagram"></a>
+          <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
+        </div>
+      </div>
+    </div>
+
+    <p class="footer-bottom">© 2025 EduAlly | All Rights Reserved</p>
+  </footer>
+</body>
+</html>

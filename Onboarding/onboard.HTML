@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Onboarding</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 500px;
+      margin: 60px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #0858d1;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0649a6;
+    }
+    #stream-section {
+      display: none; /* hidden initially */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Student Onboarding Form</h2>
+    <form action="/dashboard/dashboard.html" method="GET">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+      <label for="school">School/College Name</label>
+      <input type="text" id="school" name="school" placeholder="Enter your school/college" required>
+
+      <label for="class">Class / Level</label>
+      <select id="class" name="class" required onchange="toggleStream()">
+        <option value="">Select your level</option>
+        <option value="10">Class 10</option>
+        <option value="11">Class 11</option>
+        <option value="12">Class 12</option>
+      </select>
+
+      <div id="stream-section">
+        <label for="stream">Stream</label>
+        <select id="stream" name="stream">
+          <option value="">Select your stream</option>
+          <option value="arts">Arts</option>
+          <option value="science">Science</option>
+          <option value="commerce">Commerce</option>
+          <option value="vocational">Vocational</option>
+        </select>
+      </div>
+
+      <label for="district">Location (District)</label>
+      <select id="district" name="district" required>
+          <option value="">Select your district</option>
+          <option value="Jammu">Jammu</option>
+          <option value="Kathua">Kathua</option>
+          <option value="Samba">Samba</option>
+          <option value="Poonch">Poonch</option>
+          <option value="Rajouri">Rajouri</option>
+          <option value="Udhampur">Udhampur</option>
+          <option value="Reasi">Reasi</option>
+          <option value="Ramban">Ramban</option>
+          <option value="Doda">Doda</option>
+          <option value="Kishtwar">Kishtwar</option>
+          <option value="Srinagar">Srinagar</option>
+          <option value="Anantnag">Anantnag</option>
+          <option value="Pulwama">Pulwama</option>
+          <option value="Kupwara">Kupwara</option>
+          <option value="Shopian">Shopian</option>
+          <option value="Ganderbal">Ganderbal</option>
+          <option value="Bandipora">Bandipora</option>
+          <option value="Baramulla">Baramulla</option>
+          <option value="Budgam">Budgam</option>
+          <option value="Kulgam">Kulgam</option>
+          <option value="Kargil">Kargil</option>
+          <option value="Leh">Leh</option>
+      </select>
+
+      <button type="submit">Continue</button>
+    </form>
+  </div>
+
+  <script>
+    function toggleStream() {
+      const classLevel = document.getElementById("class").value;
+      const streamSection = document.getElementById("stream-section");
+
+      if (classLevel === "11" || classLevel === "12") {
+        streamSection.style.display = "block"; // Show stream field
+      } else {
+        streamSection.style.display = "none"; // Hide stream field
+      }
+    }
+  </script>
+</body>
+</html>

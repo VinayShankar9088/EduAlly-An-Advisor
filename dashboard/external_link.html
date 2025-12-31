@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schools & Colleges</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #eaefff;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background: #0858d1;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    h2 {
+      color: #0858d1;
+      margin-bottom: 15px;
+    }
+    #searchBox {
+      width: 100%;
+      padding: 12px;
+      font-size: 1em;
+      border: 2px solid #0858d1;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      outline: none;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      background: #fff;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    li:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    }
+    a {
+      text-decoration: none;
+      color: #0858d1;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Schools & Colleges
+  </header>
+
+  <div class="container">
+    <h2>Search by District</h2>
+    <input type="text" id="searchBox" placeholder="Type district name...">
+
+    <ul id="districtList">
+     
+        <li><a href="https://schools.org.in/jammu-and-kashmir" target="_blank">🏫 All Jammu & Kashmir Schools</a></li>
+        <li><a href="https://schools.org.in/jammu-and-kashmir/srinagar" target="_blank">🏫 Srinagar Schools</a></li>
+        <li><a href="https://schools.org.in/jammu-and-kashmir/baramulla" target="_blank">🏫 Baramulla Schools</a></li>
+        <li><a href="https://schools.org.in/jammu-and-kashmir/anantnag" target="_blank">🏫 Anantnag Schools</a></li>
+        <li><a href="https://schools.org.in/jammu-and-kashmir/pulwama" target="_blank">🏫 Pulwama Schools</a></li>
+        <li><a href="https://schools.org.in/jammu-and-kashmir/kupwara" target="_blank">🏫 Kupwara Schools</a></li>
+        <li><a href="https://schools.org.in/jammu-and-kashmir/reasi" target="_blank">🏫 Reasi Schools</a></li>
+        <li><a href="https://schools.org.in/jammu-and-kashmir/doda" target="_blank">🏫 Doda Schools</a></li>
+        <li><a href="https://schools.org.in/jammu-and-kashmir/kishtwar" target="_blank">🏫 kishtwar Schools</a></li>
+        <li><a href="https://schools.org.in/jammu-and-kashmir/kargil" target="_blank">🏫 kargil Schools</a></li>
+    </ul>
+  </div>
+
+  <script>
+    const searchBox = document.getElementById("searchBox");
+    const districtList = document.getElementById("districtList").getElementsByTagName("li");
+
+    searchBox.addEventListener("keyup", function() {
+      const filter = searchBox.value.toLowerCase();
+      for (let i = 0; i < districtList.length; i++) {
+        let text = districtList[i].textContent.toLowerCase();
+        if (text.includes(filter)) {
+          districtList[i].classList.remove("hidden");
+        } else {
+          districtList[i].classList.add("hidden");
+        }
+      }
+    });
+  </script>
+</body>
+</html>
+
