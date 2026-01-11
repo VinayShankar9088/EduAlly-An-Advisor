@@ -78,7 +78,6 @@ python app.py
 ---
 
 ## 📈 Future Scope
-- AI/ML-based recommendation engine
 - User profiles and dashboards
 - Admin panel for institutes
 - Multi-language support
@@ -94,9 +93,10 @@ python app.py
 ---
 
 ## 📬 Contact
-Developer: Vinay Shankar  
+Developer: Vinay Shankar Sharma 
 GitHub: https://github.com/VinayShankar9088
 
 ---
 
 ⭐ If you find this project useful, consider starring the repository.
+
